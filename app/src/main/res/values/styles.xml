@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--Toolbar顏色-->
+        <item name="colorPrimary">@color/BLUE_A400</item>
+        <!--狀態欄顏色-->
+        <item name="colorPrimaryDark">@color/BLUE_A400</item>
+        <!--介面顏色-->
+        <item name="android:windowBackground">@color/GRAY_200</item>
+    </style>
+</resources>
