@@ -58,10 +58,10 @@
 ##Icon
     
     setIconResource(int resId)
-    setIconX(float iconX)
 
 ##CircleBackground
 
+    setCircleX(float circleX)
     setCricleBackgroundRaduis(float circleBackgroundRaduis)
     setCricleBackgroundColor(int circleBackgroundColor)
     
