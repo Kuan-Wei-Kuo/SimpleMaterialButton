@@ -24,7 +24,7 @@ public class SimpleMaterialButton extends View {
     private int textSize = 70;
     private int circleBackgroundColor = getResources().getColor(R.color.BLUE_A400);
     private int textColor = getResources().getColor(R.color.GRAY_900);
-    private float circleBackgroundRaduis = 0, iconX = 0, customCircleBackgroundRaduis  = 0;
+    private float circleBackgroundRaduis = 0, circleX = 0, customCircleBackgroundRaduis  = 0;
     private boolean firstRun = false;
     private boolean isFoucs = false;
     private String text = "";
@@ -56,10 +56,10 @@ public class SimpleMaterialButton extends View {
         }
 
         canvas.save();
-        canvas.drawCircle(iconX, getCenterVertical(), circleBackgroundRaduis, backgroundPaint);
+        canvas.drawCircle(circleX, getCenterVertical(), circleBackgroundRaduis, backgroundPaint);
         canvas.restore();
-        canvas.drawBitmap(icon, iconX - icon.getWidth() / 2, getCenterVertical() - icon.getHeight() / 2, backgroundPaint);
-        canvas.drawText(text, iconX * 2 + 20, getCenterVertical()+(textSize/2)-5, textPaint);
+        canvas.drawBitmap(icon, circleX - icon.getWidth() / 2, getCenterVertical() - icon.getHeight() / 2, backgroundPaint);
+        canvas.drawText(text, circleX * 2 + 20, getCenterVertical()+(textSize/2)-5, textPaint);
     }
 
     @Override
@@ -99,8 +99,8 @@ public class SimpleMaterialButton extends View {
             customCircleBackgroundRaduis = circleBackgroundRaduis;
         }
 
-        if(iconX == 0){
-            iconX = circleBackgroundRaduis + (circleBackgroundRaduis/2) + 20;
+        if(circleX == 0){
+            circleX = circleBackgroundRaduis + (circleBackgroundRaduis/2) + 20;
         }
         setIconResource(R.mipmap.ic_launcher);
         backgroundPaint.setColor(circleBackgroundColor);
@@ -117,8 +117,8 @@ public class SimpleMaterialButton extends View {
         this.circleBackgroundRaduis = circleBackgroundRaduis;
     }
 
-    public void setIconX(float iconX){
-        this.iconX = iconX + customCircleBackgroundRaduis;
+    public void setCircleX(float circleX){
+        this.circleX = circleX + customCircleBackgroundRaduis;
     }
 
     public void setCricleBackgroundColor(int circleBackgroundColor){
